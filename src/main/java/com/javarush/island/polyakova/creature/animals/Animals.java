@@ -1,9 +1,8 @@
 package com.javarush.island.polyakova.creature.animals;
 
-//import com.javarush.island.polyakova.island.IslandField;
-
 import com.javarush.island.polyakova.creature.CreatureType;
 import com.javarush.island.polyakova.creature.IslandCreatureType;
+import com.javarush.island.polyakova.island.IslandSize;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +13,7 @@ public abstract class Animals implements IslandCreatureType {
 
     private int reproduceTrying;
     private final Gender gender;
-    IslandField islandField = IslandField.getInstance();
+    IslandSize islandSize = IslandSize.getInstance();
     private int x;
     private int y;
     private boolean reproduced = false;
@@ -98,7 +97,7 @@ public abstract class Animals implements IslandCreatureType {
         int oldIslandEntityX = this.getX();
         int oldIslandEntityY = this.getY();
 
-        IslandField.getInstance().getGameField()[oldIslandEntityX][oldIslandEntityY].remove(this);
+        IslandSize.getInstance().getGameField()[oldIslandEntityX][oldIslandEntityY].remove(this);
     }
 
     @Override
@@ -111,11 +110,12 @@ public abstract class Animals implements IslandCreatureType {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Animals that = (Animals) o;
-        return x == that.x && y == that.y && reproduced == that.reproduced && Double.compare(saturation, that.saturation) == 0 && Objects.equals(islandField, that.islandField) && Objects.equals(edibleSpecies, that.edibleSpecies);
+        return x == that.x && y == that.y && reproduced == that.reproduced && Double.compare(saturation, that.saturation) == 0
+                && Objects.equals(islandSize, that.islandSize) && Objects.equals(edibleSpecies, that.edibleSpecies);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(islandField, x, y, reproduced, saturation, edibleSpecies);
+        return Objects.hash(islandSize, x, y, reproduced, saturation, edibleSpecies);
     }
 }

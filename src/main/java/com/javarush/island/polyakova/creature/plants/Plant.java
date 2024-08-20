@@ -1,11 +1,12 @@
 package com.javarush.island.polyakova.creature.plants;
 
 import com.javarush.island.polyakova.creature.IslandCreatureType;
+import com.javarush.island.polyakova.island.IslandSize;
 
 import java.util.Objects;
 
 public abstract class Plant implements IslandCreatureType {
-    IslandField islandField = IslandField.getInstance();
+    IslandSize islandSize = IslandSize.getInstance();
     private final int x;
     private final int y;
 
@@ -39,11 +40,11 @@ public abstract class Plant implements IslandCreatureType {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Plant that = (Plant) o;
-        return x == that.x && y == that.y && Objects.equals(islandField, that.islandField);
+        return x == that.x && y == that.y && Objects.equals(islandSize, that.islandSize);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(islandField, x, y);
+        return Objects.hash(islandSize, x, y);
     }
 }
