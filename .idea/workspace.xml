@@ -4,11 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980b6fc8-f4dd-4b0b-a165-c9eb5f9380c6" name="Changes" comment="Make all animals">
+    <list default="true" id="980b6fc8-f4dd-4b0b-a165-c9eb5f9380c6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/CreateCreature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/CreateCreature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/Animals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/Animals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/plants/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/plants/Plant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/EntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/EntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/island/Initializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/herbivores/Buffalo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/herbivores/Buffalo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/herbivores/Caterpillar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/herbivores/Caterpillar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/herbivores/Deer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/herbivores/Deer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/herbivores/Goat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/herbivores/Goat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/herbivores/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/herbivores/Horse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/herbivores/Rabbit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/herbivores/Rabbit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/herbivores/Sheep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/herbivores/Sheep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Bear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Bear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Boar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Boar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Duck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Eagle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Eagle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Fox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Fox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Mouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Snake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Wolf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/animals/predators/Wolf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/threads/PlantGrowthThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/threads/PlantGrowthThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/threads/SimulationThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/threads/SimulationThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/creature/threads/StatisticThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/threads/StatisticThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/island/IslandSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/island/polyakova/island/IslandSize.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +57,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.EntryPoint.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
@@ -69,7 +88,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724083919252</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Make all animals">
+      <option name="closed" value="true" />
+      <created>1724161495586</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724161495586</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

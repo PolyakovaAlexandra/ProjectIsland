@@ -1,4 +1,4 @@
-package com.javarush.island.polyakova.creature.threads;
+package com.javarush.island.polyakova.threads;
 
 import com.javarush.island.polyakova.creature.CreatureType;
 import com.javarush.island.polyakova.creature.IslandCreatureType;

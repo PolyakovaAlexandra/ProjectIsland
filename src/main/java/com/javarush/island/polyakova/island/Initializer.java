@@ -1,4 +1,4 @@
-package com.javarush.island.polyakova;
+package com.javarush.island.polyakova.island;
 
 import com.javarush.island.polyakova.creature.CreateCreature;
 import com.javarush.island.polyakova.creature.IslandCreatureType;
@@ -18,7 +18,6 @@ public class Initializer {
         Scanner scanner = new Scanner(System.in);
         int sizeOfFieldX=0;
         System.out.println("Добро пожаловать в симуляцию жизни острова!");
-        System.out.println("Введите желаемую ширину(x) и высоту(y) поля в диапазоне от 3 до 10 клеток");
         while (true){
             System.out.println("Введите желаемую ширину(x) острова в диапазоне от 3 до 10 клеток");
             if (scanner.hasNextInt()){
@@ -34,10 +33,8 @@ public class Initializer {
     public static int initSizeOfFieldY() {
         Scanner scanner = new Scanner(System.in);
         int sizeOfFieldY = 0;
-        int sizeOfFieldX=initSizeOfFieldX();
-        System.out.println("Введите желаемую высоту поля в диапазоне от 3 до 10 клеток");
         while (true){
-            System.out.println("Введите желаемую ширину(x) острова в диапазоне от 3 до 10 клеток");
+            System.out.println("Введите желаемую высоту(y) острова в диапазоне от 3 до 10 клеток");
             if (scanner.hasNextInt()){
                 sizeOfFieldY=scanner.nextInt();
                 break;}
@@ -45,7 +42,7 @@ public class Initializer {
                 System.out.println("Попробуйте снова, напоминаю: введите число от 3 до 10:");
             }
         }
-        System.out.println("Симуляция запущена, поле размером " + sizeOfFieldX + " x " + sizeOfFieldY + ", наслаждайтесь:)");
+        //System.out.println("Симуляция запущена, поле размером " + sizeOfFieldX + " x " + sizeOfFieldY + ", наслаждайтесь:)");
         return sizeOfFieldY;
     }
 

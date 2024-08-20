@@ -4,7 +4,7 @@ import com.javarush.island.polyakova.creature.CreatureType;
 import com.javarush.island.polyakova.creature.animals.Animals;
 
 
-public class Horse extends Animals {
+public class Horse extends Herbivores {
     public Horse(int x, int y) {
         super(x, y);
         this.getEdibleSpecies().put(CreatureType.PLANT, 100);

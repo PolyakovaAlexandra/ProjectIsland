@@ -1,6 +1,5 @@
 package com.javarush.island.polyakova.island;
 
-import com.javarush.island.polyakova.Initializer;
 import com.javarush.island.polyakova.creature.CreateCreature;
 import com.javarush.island.polyakova.creature.CreatureType;
 import com.javarush.island.polyakova.creature.IslandCreatureType;
@@ -12,7 +11,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class IslandSize {
     public static final int sizeOfFieldX = Initializer.initSizeOfFieldX();
-    public static final int sizeOfFieldY = Initializer.initSizeOfFieldX();
+    public static final int sizeOfFieldY = Initializer.initSizeOfFieldY();
     private static final IslandSize instance = new IslandSize(sizeOfFieldX,sizeOfFieldY, new CreateCreature());
     private final CreateCreature createCreature;
     private final List<IslandCreatureType>[][] gameField;
@@ -55,14 +54,14 @@ public class IslandSize {
 
     public void firstInitCreatures(int x, int y) {
         for (CreatureType type : CreatureType.values()) {
-            int amountOfOneTypeOfEntity = ThreadLocalRandom.current().nextInt(1, type.getMaxAmount() + 1);
-            while (amountOfOneTypeOfEntity > 0) {
+            int amountOfOneTypeOfCreature = ThreadLocalRandom.current().nextInt(1, type.getMaxAmount() + 1);
+            while (amountOfOneTypeOfCreature > 0) {
                 IslandCreatureType creature = createCreature.createAnimal(x,y,type);
                 if (creature instanceof Animals) {
-                    ((Animals) creature).setSaturation(creature.getType().getFullSaturation() * 0.5);
+                    ((Animals) creature).setSaturation(creature.getType().getFullSaturation());
                 }
                 gameField[x][y].add(creature);
-                amountOfOneTypeOfEntity--;
+                amountOfOneTypeOfCreature--;
             }
         }
     }

@@ -1,8 +1,11 @@
-package com.javarush.island.polyakova.creature.threads;
+package com.javarush.island.polyakova.threads;
 
 import com.javarush.island.polyakova.creature.CreatureType;
 import com.javarush.island.polyakova.creature.IslandCreatureType;
 import com.javarush.island.polyakova.creature.animals.Animals;
+import com.javarush.island.polyakova.creature.animals.herbivores.Caterpillar;
+import com.javarush.island.polyakova.creature.animals.herbivores.Herbivores;
+import com.javarush.island.polyakova.creature.animals.predators.Predators;
 import com.javarush.island.polyakova.creature.plants.Plant;
 import com.javarush.island.polyakova.island.IslandSize;
 import com.javarush.island.polyakova.services.Eat;
@@ -23,10 +26,10 @@ public class SimulationThread extends  Thread{
     int counter = 0;
     CreatureType[] array = CreatureType.values();
 
-    public SimulationThread(Eat nutrition,
+    public SimulationThread(Eat eat,
                                 Reproduction reproduction,
                                 Move moving) {
-        this.eat = nutrition;
+        this.eat = eat;
         this.reproduction = reproduction;
         this.moving = moving;
         this.running = true;
@@ -55,13 +58,16 @@ public class SimulationThread extends  Thread{
             System.out.println(countCreaturesInGameField());
             actEntity();
             System.out.println("цикл " + counter++);
-        /*    try {
+            if ((areAllHerbivorousDead()||areAllPredatorsDead())==true)
+                stopSimulation();
+           /*try {
                 System.out.println("зашли в ожидание" + this);
                 this.join();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println(countEntitiesInGameField() + " после");*/
+            System.out.println(countCreaturesInGameField() + " после");*/
+
         }
     }
 
@@ -107,9 +113,9 @@ public class SimulationThread extends  Thread{
     private boolean areAllHerbivorousDead() {
         for (int i = 0; i < islandSize.getNumRows(); i++) {
             for (int j = 0; j < islandSize.getNumColumns(); j++) {
-                List<IslandCreatureType> entities = IslandSize.getGameField()[i][j];
+                List<IslandCreatureType> entities = islandSize.getGameField()[i][j];
                 for (IslandCreatureType entity : entities) {
-                    if (entity instanceof Herbivorous) {
+                    if (entity instanceof Herbivores) {
                         if ((entity instanceof Caterpillar)) {
                             continue;
                         }

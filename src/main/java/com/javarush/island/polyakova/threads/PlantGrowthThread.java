@@ -1,4 +1,4 @@
-package com.javarush.island.polyakova.creature.threads;
+package com.javarush.island.polyakova.threads;
 
 import com.javarush.island.polyakova.creature.CreateCreature;
 import com.javarush.island.polyakova.creature.CreatureType;
@@ -8,6 +8,7 @@ import com.javarush.island.polyakova.island.IslandSize;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
+
 
 public class PlantGrowthThread extends Thread{
     IslandSize islandSize = IslandSize.getInstance();
@@ -31,7 +32,9 @@ public class PlantGrowthThread extends Thread{
             for (int x = 0; x < islandSize.getNumRows(); x++) {
                 for (int y = 0; y < islandSize.getNumColumns(); y++) {
                     if (countOfPlantOnCellResolver(x, y) < CreatureType.PLANT.getMaxAmount()) {
-                        int countOfNewPlants = ThreadLocalRandom.current().nextInt(0, (CreatureType.PLANT.getMaxAmount() - 1) / 5);
+                        int countOfNewPlants = ThreadLocalRandom.
+                                current().
+                                nextInt(0, (CreatureType.PLANT.getMaxAmount() - 1) / 5);
                         while (countOfNewPlants > 0) {
                             IslandCreatureType plant = createCreature.createAnimal(x, y, CreatureType.PLANT);
                             islandSize.getInstance().getGameField()[x][y].add(plant);
@@ -47,13 +50,14 @@ public class PlantGrowthThread extends Thread{
         }
     }
 
+
     public void stopPlantGeneration() {
         running = false;
     }
 
     private int countOfPlantOnCellResolver(int x, int y) {
-        List<IslandCreatureType> entitiesInCell = islandSize.getGameField()[x][y];
-        return (int) entitiesInCell.stream()
+        List<IslandCreatureType> creaturesInCell = islandSize.getGameField()[x][y];
+        return (int) creaturesInCell.stream()
                 .filter(entity -> entity.getType() == CreatureType.PLANT)
                 .count();
     }
@@ -62,7 +66,7 @@ public class PlantGrowthThread extends Thread{
         return (int) Arrays.stream(islandSize.getGameField())
                 .flatMap(Arrays::stream)  // объединяем все списки в один поток
                 .flatMap(List::stream)    // объединяем все элементы в один поток
-                .filter(entity -> (entity).getType() == CreatureType.PLANT)  // фильтруем по типу
+                .filter(creature -> (creature).getType() == CreatureType.PLANT)  // фильтруем по типу
                 .count();
     }
 }

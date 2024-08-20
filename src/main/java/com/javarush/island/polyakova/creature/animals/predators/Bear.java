@@ -3,7 +3,7 @@ package com.javarush.island.polyakova.creature.animals.predators;
 import com.javarush.island.polyakova.creature.CreatureType;
 import com.javarush.island.polyakova.creature.animals.Animals;
 
-public class Bear extends Animals {
+public class Bear extends Predators {
     public Bear(int x, int y) {
         super(x, y);
         this.getEdibleSpecies().put(CreatureType.SNAKE, 80);
